@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .image {
+      flex: 1 1 400px;
+    }
+
+    .image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .content {
+      flex: 1 1 500px;
+    }
+
+    .content h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #d63384;
+    }
+
+    .content p {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .contact {
+      font-weight: bold;
+    }
+
+    .contact a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #ff4d6d;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .button:hover {
+      background-color: #d62b50;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="image">
+      <img src="images/outside.jpg" alt="outside">
+    </div>
+    <div class="content">
+      <h1>About Us</h1>
+      <p>
+        Embark on a tranquil journey at our Krishnkunj Guest House, enveloped by the gentle ambiance that brings both luxury and comfort to life. Enjoy delightful experiences from the moment you step in until the moment you leave.
+      </p>
+      <p>
+        Our rooms and dining hall are designed for comfort, ideal for both business and leisure. We combine grand décor, local warmth, and hospitality, helping create a home-like feeling even when you're far from home.
+      </p>
+      <p class="contact">
+        📍 <strong>Address:</strong> Beside Bashay Water Tank, Warpur, Bankura, West Bengal<br>
+        📞 <strong>Contact Us:</strong> <a href="tel:+919007062820">+91 9007062820</a>
+      </p>
+      <a href="tel:+919007062820" class="button">BOOK NOW</a>
+    </div>
+  </div>
+
+</body>
+</html>

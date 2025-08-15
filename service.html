@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colorful Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 36px;
+      color: #333;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .service-box {
+      color: white;
+      border-radius: 15px;
+      padding: 30px 20px;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+
+    .service-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .service-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .service-desc {
+      font-size: 15px;
+    }
+
+    /* Different background colors for each box */
+    .color1 { background-color: #2E8B57; }  /* Green */
+    .color2 { background-color: #FF6F61; }  /* Coral Red */
+    .color3 { background-color: #4B7BE5; }  /* Blue */
+    .color4 { background-color: #FFC107; }  /* Yellow */
+    .color5 { background-color: #9C27B0; }  /* Purple */
+    .color6 { background-color: #00BCD4; }  /* Cyan */
+  </style>
+</head>
+<body>
+
+  <h1>Our Services</h1>
+  <div class="services-grid">
+
+    <div class="service-box color1">
+      <div class="service-icon"><i class="fas fa-bed"></i></div>
+      <div class="service-title">Comfortable Rooms</div>
+      <div class="service-desc">Spacious and clean rooms for your peaceful stay.</div>
+    </div>
+
+    <div class="service-box color2">
+      <div class="service-icon"><i class="fas fa-wifi"></i></div>
+      <div class="service-title">Free Wi-Fi</div>
+      <div class="service-desc">Stay connected with high-speed internet.</div>
+    </div>
+
+    <div class="service-box color3">
+      <div class="service-icon"><i class="fas fa-utensils"></i></div>
+      <div class="service-title">Room Service</div>
+      <div class="service-desc">Delicious food delivered to your room 24/7.</div>
+    </div>
+
+    <div class="service-box color4">
+      <div class="service-icon"><i class="fas fa-car"></i></div>
+      <div class="service-title">Parking Facility</div>
+      <div class="service-desc">Safe and secure parking space available.</div>
+    </div>
+
+    <div class="service-box color5">
+      <div class="service-icon"><i class="fas fa-spa"></i></div>
+      <div class="service-title">Relaxing Spa</div>
+      <div class="service-desc">Unwind with our premium spa & massage service.</div>
+    </div>
+
+    <div class="service-box color6">
+      <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+      <div class="service-title">24x7 Security</div>
+      <div class="service-desc">Full-time security with CCTV surveillance.</div>
+    </div>
+
+  </div>
+
+</body>
+</html>

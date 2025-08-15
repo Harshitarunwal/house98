@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rooms - Guest House</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+    }
+
+    header {
+      background-color: #2E8B57;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .room-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .room {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .room img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+
+    .room-details {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .room-details h2 {
+      margin-top: 0;
+      color: #2E8B57;
+    }
+
+    .room-details p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .room {
+        flex-direction: column;
+      }
+
+      .room img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Our Rooms</h1>
+    <p>Choose the perfect stay for your comfort</p>
+  </header>
+
+  <div class="room-container">
+
+    <!-- Normal Room -->
+    <div class="room">
+      <img src="images/smallroom.jpg"alt="smallroom">
+      <div class="room-details">
+        <h2>Normal Room</h2>
+        <p>
+          Comfortable and affordable room ideal for solo travelers or small families. Features include:
+          <ul>
+            <li>Single/Double Bed</li>
+            <li>Fan + Basic Furniture</li>
+            <li>Attached Bathroom</li>
+            <li>TV and Wi-Fi Access</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+    <!-- Luxury Room -->
+    <div class="room">
+      <img src="images/largeroom.jpg"alt="largeroom">
+      <div class="room-details">
+        <h2>Luxury Room</h2>
+        <p>
+          Premium stay experience for ultimate comfort. Features include:
+          <ul>
+            <li>King Size Bed with AC</li>
+            <li>Modern Interior with Sofa Set</li>
+            <li>LED TV, Mini Fridge</li>
+            <li>24/7 Room Service</li>
+            <li>Balcony with View</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
