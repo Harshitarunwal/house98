@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Gallery</title>
+    <title>Gallery</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -25,6 +25,42 @@
             object-fit: cover;
             border-radius: 10px;
             border: 2px solid #ccc;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Popup / Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+        .lightbox:target {
+            display: flex;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 30px;
+            text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -38,15 +74,43 @@
         <img src="images/service.jpg" alt="service">
         <img src="images/large.jpg" alt="large">
         <img src="images/largeroom.jpg" alt="largeroom">
-        <img src="images/mithonDam.jpg"alt="mithon Dam">
+        <img src="images/mithonDam.jpg" alt="mithon Dam">
         <img src="images/flower.jpg" alt="flower">
-        <img src="images/palash.jpg " alt="palash">
+        <img src="images/palash.jpg" alt="palash">
         <img src="images/1.jpg" alt="1">
         <img src="images/ayodhya.jpg" alt="ayodhya">
         <img src="images/baranti.jpg" alt="baranti">
         <img src="images/header.jpg" alt="header">
-
     </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img id="lightbox-img" src="" alt="big view">
+    </div>
+
+    <script>
+        const galleryImages = document.querySelectorAll('.gallery img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        document.querySelector('.close').addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
 </html>
